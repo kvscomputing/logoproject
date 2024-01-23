@@ -1,5 +1,3 @@
-import turtle
-
 def square_window(myTurtle, size, x, y):
     myTurtle.setheading(0)
     myTurtle.penup()
@@ -66,6 +64,37 @@ def front_door(myTurtle, length, width, x, y):
     myTurtle.end_fill()
     doorknob(myTurtle, length/16, x + (3*width)/4, y + length/2)
 
-myTurtle = turtle.Turtle()
-front_door(myTurtle, 200, 100, 0, 0)
-turtle.done()
+def garage_door(myTurtle, length, width, x, y):
+    myTurtle.setheading(0)
+    myTurtle.penup()
+    myTurtle.fillcolor("silver")
+    myTurtle.goto(x, y)
+    myTurtle.pendown()
+    myTurtle.begin_fill()
+    for i in range(2):
+        myTurtle.forward(width)
+        myTurtle.left(90)
+        myTurtle.forward(length)
+        myTurtle.left(90)
+    myTurtle.end_fill()
+
+def house_outline(myTurtle, length, width, x, y):
+    myTurtle.setheading(0)
+    myTurtle.penup()
+    myTurtle.fillcolor("white")
+    myTurtle.goto(x, y)
+    myTurtle.pendown()
+    myTurtle.begin_fill()
+    for i in range(2):
+        myTurtle.forward(width)
+        myTurtle.left(90)
+        myTurtle.forward(length)
+        myTurtle.left(90)
+    myTurtle.penup()
+    myTurtle.goto(x, y+length)
+    myTurtle.setheading(60)
+    myTurtle.pendown()
+    myTurtle.forward(width)
+    myTurtle.right(120)
+    myTurtle.forward(width)
+    myTurtle.end_fill()
