@@ -1,13 +1,16 @@
 if __name__ == "__main__":
+    #import necessary librarires
     import turtle
     from shapes import *
 
+    #screen
     myTurtle = turtle.Turtle()
     myTurtle.speed(100)
     screen = turtle.Screen()
     screen.setup(width=1600, height=1600)   
     screen.bgcolor('lightblue')
 
+    #executes all of the functions from shapes.py following import. 
     myTurtle.penup()
     myTurtle.goto(-1000, -400)
     myTurtle.pendown()

@@ -1,5 +1,6 @@
 from math import sqrt
 
+#square windows.
 def square_window(myTurtle, size, x, y):
     myTurtle.setheading(0)
     myTurtle.penup()
@@ -21,7 +22,8 @@ def square_window(myTurtle, size, x, y):
     myTurtle.setheading(0)
     myTurtle.pendown()
     myTurtle.forward(size)
-    
+
+#round window at the top of the house.  
 def round_window(myTurtle, radius, x, y):
     myTurtle.setheading(0)
     myTurtle.penup()
@@ -40,7 +42,7 @@ def round_window(myTurtle, radius, x, y):
     myTurtle.pendown()
     myTurtle.forward(2*radius)
     
-
+#doorknob helper function for the front door function below.
 def doorknob(myTurtle, radius, x, y):
     myTurtle.setheading(0)
     myTurtle.penup()
@@ -66,6 +68,7 @@ def front_door(myTurtle, length, width, x, y):
     myTurtle.end_fill()
     doorknob(myTurtle, length/16, x + (3*width)/4, y + length/2)
 
+#garage doors.
 def garage_door(myTurtle, length, width, x, y):
     myTurtle.setheading(0)
     myTurtle.penup()
@@ -80,6 +83,7 @@ def garage_door(myTurtle, length, width, x, y):
         myTurtle.left(90)
     myTurtle.end_fill()
 
+#draws the frame of the house.
 def house_outline(myTurtle, length, width, x, y):
     myTurtle.setheading(0)
     myTurtle.penup()
@@ -105,6 +109,7 @@ def house_outline(myTurtle, length, width, x, y):
     myTurtle.forward(width)
     myTurtle.end_fill()
 
+#cloud code to be re-used multiple times for multiple clouds.
 def cloud(myTurtle, radius, x, y):
     myTurtle.penup()
     myTurtle.goto(x, y)
@@ -118,6 +123,7 @@ def cloud(myTurtle, radius, x, y):
         myTurtle.left(angle)
     myTurtle.end_fill()
 
+#tree to be reiterated in main
 def tree(myTurtle, length, width, x, y):
     #trunk
     myTurtle.penup() 
@@ -126,9 +132,9 @@ def tree(myTurtle, length, width, x, y):
     myTurtle.fillcolor("brown")
     myTurtle.begin_fill()
     for _ in range(2):
-        myTurtle.forward(width)  # Width of the trunk
+        myTurtle.forward(width)  
         myTurtle.left(90)
-        myTurtle.forward(length)  # Height of the trunk
+        myTurtle.forward(length) 
         myTurtle.left(90)
     myTurtle.end_fill()
 
@@ -138,12 +144,13 @@ def tree(myTurtle, length, width, x, y):
     myTurtle.pendown()
     myTurtle.fillcolor("lightgreen")
     myTurtle.begin_fill()
-    treetop_side_length = width * 3  # relative to width.
+    treetop_side_length = width * 3  
     for _ in range(3):
         myTurtle.forward(treetop_side_length)  #triangle side length.
         myTurtle.left(120)
     myTurtle.end_fill() 
 
+#code for sun in the top-left corner.
 def sun(myTurtle, radius, x, y):
     myTurtle.penup()
     myTurtle.goto(x, y)

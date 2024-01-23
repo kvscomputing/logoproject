@@ -6,6 +6,10 @@ Python comes with the turtle library pre-installed, so all you need to do is imp
 
 The shapes.py file contains the functions that draw the shapes. Adjustments to the locations, sizing, and color of the files can all be made in main as the functions in shapes.py take in arguments. 
 
+The main.py file contains a "if __name__ == "__main__":" statement that allows the code to be ran from the terminal. You can run this by navigating to the place where you cloned our repo and typing in your terminal "python3 main.py", and the graphics window should open up for turtle. 
+
+Comments are added throughout the files, as well as a requirements.txt file that should explain the dependencies needed for this project. Please let us know if you have further questions! 
+
 
 
 
