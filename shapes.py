@@ -105,7 +105,7 @@ def house_outline(myTurtle, length, width, x, y):
     myTurtle.forward(width)
     myTurtle.end_fill()
 
-def cloud(myTurtle, length, width, x, y):
+def cloud(myTurtle, radius, x, y):
     myTurtle.penup()
     myTurtle.goto(x, y)
     myTurtle.pendown()
@@ -114,7 +114,7 @@ def cloud(myTurtle, length, width, x, y):
     numcircles = 3
     angle = 360/numcircles
     for i in range(numcircles):
-        myTurtle.circle(width // 2) 
+        myTurtle.circle(radius // 2) 
         myTurtle.left(angle)
     myTurtle.end_fill()
 
@@ -146,11 +146,13 @@ def tree(myTurtle, length, width, x, y):
 
 def sun(myTurtle, radius, x, y):
     myTurtle.penup()
-    myTurtle.goto(x - radius, y)
+    myTurtle.goto(x, y)
     myTurtle.setheading(0)
     myTurtle.fillcolor("yellow")
     myTurtle.begin_fill()
     myTurtle.circle(radius, 90)
-    myTurtle.goto(x, y)
-    myTurtle.goto(x - radius, y)
+    myTurtle.setheading(180)
+    myTurtle.forward(radius)
+    myTurtle.setheading(270)
+    myTurtle.forward(radius)
     myTurtle.end_fill()
