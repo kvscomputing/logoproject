@@ -104,3 +104,53 @@ def house_outline(myTurtle, length, width, x, y):
     myTurtle.right(150)
     myTurtle.forward(width)
     myTurtle.end_fill()
+
+def cloud(myTurtle, length, width, x, y):
+    myTurtle.penup()
+    myTurtle.goto(x, y)
+    myTurtle.pendown()
+    myTurtle.fillcolor("grey")
+    myTurtle.begin_fill()
+    numcircles = 3
+    angle = 360/numcircles
+    for i in range(numcircles):
+        myTurtle.circle(width // 2) 
+        myTurtle.left(angle)
+    myTurtle.end_fill()
+
+def tree(myTurtle, length, width, x, y):
+    #trunk
+    myTurtle.penup() 
+    myTurtle.goto(x, y)
+    myTurtle.pendown()
+    myTurtle.fillcolor("brown")
+    myTurtle.begin_fill()
+    for _ in range(2):
+        myTurtle.forward(width)  # Width of the trunk
+        myTurtle.left(90)
+        myTurtle.forward(length)  # Height of the trunk
+        myTurtle.left(90)
+    myTurtle.end_fill()
+
+    #top of tree as one large triangle.
+    myTurtle.penup()
+    myTurtle.goto(x - width, y + length)
+    myTurtle.pendown()
+    myTurtle.fillcolor("lightgreen")
+    myTurtle.begin_fill()
+    treetop_side_length = width * 3  # relative to width.
+    for _ in range(3):
+        myTurtle.forward(treetop_side_length)  #triangle side length.
+        myTurtle.left(120)
+    myTurtle.end_fill() 
+
+def sun(myTurtle, radius, x, y):
+    myTurtle.penup()
+    myTurtle.goto(x - radius, y)
+    myTurtle.setheading(0)
+    myTurtle.fillcolor("yellow")
+    myTurtle.begin_fill()
+    myTurtle.circle(radius, 90)
+    myTurtle.goto(x, y)
+    myTurtle.goto(x - radius, y)
+    myTurtle.end_fill()
