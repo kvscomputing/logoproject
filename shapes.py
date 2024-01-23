@@ -1,0 +1,71 @@
+import turtle
+
+def square_window(myTurtle, size, x, y):
+    myTurtle.setheading(0)
+    myTurtle.penup()
+    myTurtle.fillcolor("white")
+    myTurtle.goto(x, y)
+    myTurtle.pendown()
+    myTurtle.begin_fill()
+    for i in range(4):
+        myTurtle.forward(size)
+        myTurtle.right(90)
+    myTurtle.end_fill()
+    myTurtle.penup()
+    myTurtle.forward(size/2)
+    myTurtle.left(270)
+    myTurtle.pendown()
+    myTurtle.forward(size)
+    myTurtle.penup()
+    myTurtle.goto(x, y - size/2)
+    myTurtle.setheading(0)
+    myTurtle.pendown()
+    myTurtle.forward(size)
+    
+def round_window(myTurtle, radius, x, y):
+    myTurtle.setheading(0)
+    myTurtle.penup()
+    myTurtle.fillcolor("white")
+    myTurtle.goto(x, y)
+    myTurtle.pendown()
+    myTurtle.begin_fill()
+    myTurtle.circle(radius)
+    myTurtle.end_fill()
+    myTurtle.right(270)
+    myTurtle.forward(2*radius)
+    myTurtle.penup()
+    myTurtle.setheading(180)
+    myTurtle.circle(radius, 90)
+    myTurtle.setheading(0)
+    myTurtle.pendown()
+    myTurtle.forward(2*radius)
+    
+
+def doorknob(myTurtle, radius, x, y):
+    myTurtle.setheading(0)
+    myTurtle.penup()
+    myTurtle.fillcolor("yellow")
+    myTurtle.goto(x, y)
+    myTurtle.pendown()
+    myTurtle.begin_fill()
+    myTurtle.circle(radius)
+    myTurtle.end_fill()
+
+def front_door(myTurtle, length, width, x, y):
+    myTurtle.setheading(0)
+    myTurtle.penup()
+    myTurtle.fillcolor("brown")
+    myTurtle.goto(x, y)
+    myTurtle.pendown()
+    myTurtle.begin_fill()
+    for i in range(2):
+        myTurtle.forward(width)
+        myTurtle.left(90)
+        myTurtle.forward(length)
+        myTurtle.left(90)
+    myTurtle.end_fill()
+    doorknob(myTurtle, length/16, x + (3*width)/4, y + length/2)
+
+myTurtle = turtle.Turtle()
+front_door(myTurtle, 200, 100, 0, 0)
+turtle.done()
