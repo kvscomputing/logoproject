@@ -1,3 +1,5 @@
+from math import sqrt
+
 def square_window(myTurtle, size, x, y):
     myTurtle.setheading(0)
     myTurtle.penup()
@@ -81,20 +83,24 @@ def garage_door(myTurtle, length, width, x, y):
 def house_outline(myTurtle, length, width, x, y):
     myTurtle.setheading(0)
     myTurtle.penup()
-    myTurtle.fillcolor("white")
+    myTurtle.fillcolor("pink")
     myTurtle.goto(x, y)
     myTurtle.pendown()
-    myTurtle.begin_fill()
     for i in range(2):
+        myTurtle.begin_fill()
         myTurtle.forward(width)
         myTurtle.left(90)
         myTurtle.forward(length)
         myTurtle.left(90)
+        myTurtle.end_fill()
+    myTurtle.begin_fill()
     myTurtle.penup()
     myTurtle.goto(x, y+length)
-    myTurtle.setheading(60)
+    myTurtle.setheading(30)
     myTurtle.pendown()
-    myTurtle.forward(width)
-    myTurtle.right(120)
+    myTurtle.forward(width/sqrt(3))
+    myTurtle.right(60)
+    myTurtle.forward(width/sqrt(3))
+    myTurtle.right(150)
     myTurtle.forward(width)
     myTurtle.end_fill()
