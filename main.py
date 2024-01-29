@@ -1,9 +1,10 @@
-if __name__ == "__main__":
-    #import necessary librarires
-    import turtle
-    from shapes import *
+#import necessary librarires
+import turtle
+from shapes import *
+from PIL import Image
 
-    #screen
+if __name__=='__main__':
+    # #screen
     myTurtle = turtle.Turtle()
     myTurtle.speed(100)
     screen = turtle.Screen()
@@ -11,10 +12,10 @@ if __name__ == "__main__":
     screen.bgcolor('lightblue')
 
     #executes all of the functions from shapes.py following import. 
-    myTurtle.penup()
-    myTurtle.goto(-1000, -400)
-    myTurtle.pendown()
-    myTurtle.forward(2000)
+    # myTurtle.penup()
+    # myTurtle.goto(-1000, -400)
+    # myTurtle.pendown()
+    # myTurtle.forward(2000)
     house_outline(myTurtle, 300, 600, -600, -400)
     garage_door(myTurtle, 100, 175, -550, -400)
     garage_door(myTurtle, 100, 175, -325, -400)
@@ -28,4 +29,16 @@ if __name__ == "__main__":
     cloud(myTurtle, 100, -400, 300)
     cloud(myTurtle, 100, 0, 300)
     sun(myTurtle, 200, -screen.window_width()/2, screen.window_height()/2-200)
-    turtle.done()
+
+# save turtle image
+canvas = myTurtle.getscreen().getcanvas()
+canvas.postscript(file= 'House_final.ps')
+
+
+# Open the PS file
+ps_file_path = r'./House_final.ps'
+img = Image.open(ps_file_path)
+
+# Save as PNG with a different name
+png_file_path = r'./House_final.png'
+img.save(png_file_path, 'PNG')

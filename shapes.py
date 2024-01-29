@@ -4,7 +4,7 @@ from math import sqrt
 def square_window(myTurtle, size, x, y):
     myTurtle.setheading(0)
     myTurtle.penup()
-    myTurtle.fillcolor("white")
+    myTurtle.fillcolor("#FFFFFF")
     myTurtle.goto(x, y)
     myTurtle.pendown()
     myTurtle.begin_fill()
@@ -27,7 +27,7 @@ def square_window(myTurtle, size, x, y):
 def round_window(myTurtle, radius, x, y):
     myTurtle.setheading(0)
     myTurtle.penup()
-    myTurtle.fillcolor("white")
+    myTurtle.fillcolor("#FFFFFF")
     myTurtle.goto(x, y)
     myTurtle.pendown()
     myTurtle.begin_fill()
@@ -46,7 +46,7 @@ def round_window(myTurtle, radius, x, y):
 def doorknob(myTurtle, radius, x, y):
     myTurtle.setheading(0)
     myTurtle.penup()
-    myTurtle.fillcolor("yellow")
+    myTurtle.fillcolor("#FFFF00")
     myTurtle.goto(x, y)
     myTurtle.pendown()
     myTurtle.begin_fill()
@@ -56,7 +56,7 @@ def doorknob(myTurtle, radius, x, y):
 def front_door(myTurtle, length, width, x, y):
     myTurtle.setheading(0)
     myTurtle.penup()
-    myTurtle.fillcolor("brown")
+    myTurtle.fillcolor("#A52A2A")
     myTurtle.goto(x, y)
     myTurtle.pendown()
     myTurtle.begin_fill()
@@ -72,7 +72,7 @@ def front_door(myTurtle, length, width, x, y):
 def garage_door(myTurtle, length, width, x, y):
     myTurtle.setheading(0)
     myTurtle.penup()
-    myTurtle.fillcolor("silver")
+    myTurtle.fillcolor("#C0C0C0")
     myTurtle.goto(x, y)
     myTurtle.pendown()
     myTurtle.begin_fill()
@@ -87,7 +87,7 @@ def garage_door(myTurtle, length, width, x, y):
 def house_outline(myTurtle, length, width, x, y):
     myTurtle.setheading(0)
     myTurtle.penup()
-    myTurtle.fillcolor("pink")
+    myTurtle.fillcolor("#FFC0CB")
     myTurtle.goto(x, y)
     myTurtle.pendown()
     for i in range(2):
@@ -114,7 +114,7 @@ def cloud(myTurtle, radius, x, y):
     myTurtle.penup()
     myTurtle.goto(x, y)
     myTurtle.pendown()
-    myTurtle.fillcolor("grey")
+    myTurtle.fillcolor("#808080")
     myTurtle.begin_fill()
     numcircles = 3
     angle = 360/numcircles
@@ -129,7 +129,7 @@ def tree(myTurtle, length, width, x, y):
     myTurtle.penup() 
     myTurtle.goto(x, y)
     myTurtle.pendown()
-    myTurtle.fillcolor("brown")
+    myTurtle.fillcolor("#A52A2A")
     myTurtle.begin_fill()
     for _ in range(2):
         myTurtle.forward(width)  
@@ -142,7 +142,7 @@ def tree(myTurtle, length, width, x, y):
     myTurtle.penup()
     myTurtle.goto(x - width, y + length)
     myTurtle.pendown()
-    myTurtle.fillcolor("lightgreen")
+    myTurtle.fillcolor("#90EE90")
     myTurtle.begin_fill()
     treetop_side_length = width * 3  
     for _ in range(3):
@@ -155,7 +155,7 @@ def sun(myTurtle, radius, x, y):
     myTurtle.penup()
     myTurtle.goto(x, y)
     myTurtle.setheading(0)
-    myTurtle.fillcolor("yellow")
+    myTurtle.fillcolor("#FFFF00")
     myTurtle.begin_fill()
     myTurtle.circle(radius, 90)
     myTurtle.setheading(180)
@@ -163,3 +163,4 @@ def sun(myTurtle, radius, x, y):
     myTurtle.setheading(270)
     myTurtle.forward(radius)
     myTurtle.end_fill()
+
