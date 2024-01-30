@@ -45,7 +45,7 @@ class TestShapes(unittest.TestCase):
         self._turtle = svg_turtle.SvgTurtle(*CANVAS_SIZE)
         
 
-    def house(self):
+    def test_house(self):
         shapes.house_outline(self._turtle, 300, 600, -600, -400)
         shapes.garage_door(self._turtle, 100, 175, -550, -400)
         shapes.garage_door(self._turtle, 100, 175, -325, -400)

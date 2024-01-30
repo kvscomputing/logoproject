@@ -3,12 +3,14 @@ import turtle
 from shapes import *
 from PIL import Image
 
+CANVAS_SIZE = (719, 608)
+
 if __name__=='__main__':
     # #screen
     myTurtle = turtle.Turtle()
     myTurtle.speed(100)
     screen = turtle.Screen()
-    screen.setup(width=1600, height=1600)   
+    screen.setup(width=CANVAS_SIZE[0], height=CANVAS_SIZE[1])   
     screen.bgcolor('lightblue')
 
     #executes all of the functions from shapes.py following import. 
