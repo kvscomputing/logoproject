@@ -1,1 +1,1 @@
-def test_image()
+def test_image(): 
